@@ -9,3 +9,14 @@ html, body {
   font-size: xx-large;
   text-align: center;
 }
+
+button {
+  border-radius: 8px;
+  font-size: x-large;
+  width: 80px; height: 40px;
+}
+
+input {
+  font-size: xx-large;
+  width: 4ch;
+}
