@@ -1,0 +1,11 @@
+html {
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+}
+html, body {
+  background: black;
+  color: white;
+  font-family: Arial;
+  font-size: xx-large;
+  text-align: center;
+}

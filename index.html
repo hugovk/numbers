@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Numbers</title>
+  <meta name="description" content="The odd and even numbers for a page range, to help with double-sided printing">
+  <meta name="theme-color" content="black">
+  <link rel="stylesheet" href="style.css">
+  <script src='js/jquery-3.4.1.min.js'></script>
+  <script>
+    $(document).ready(function() {
+      $('#frm1').keyup(function() {
+        getOddAndEven();
+      });
+    });
+  </script>
+</head>
+<body>
+
+<p>
+  <form id="frm1">
+    <label class="field">Number of pages: </label><input type="number" value="2" min="2" step="1" name="pages" autofocus>
+    <p><div id="odd">1</div> <button type="button" onclick="copyToClipboard($('#odd').text())">Copy</button></p>
+    <p><div id="even">2</div> <button type="button" onclick="copyToClipboard($('#even').text())">Copy</button></p>
+  </form>
+</p>
+
+<script src="js/script.js"></script>
+</body>
+</html>
