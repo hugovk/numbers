@@ -19,7 +19,7 @@
 
 <p>
   <form id="frm1">
-    <label class="field">Number of pages: </label><input type="number" value="2" min="2" step="1" name="pages" autofocus>
+    <label class="field">Number of pages: </label><input type="number" value="2" min="2" step="1" name="pages" autofocus onclick="getOddAndEven();">
     <p><div id="odd">1</div> <button type="button" onclick="copyToClipboard($('#odd').text())">Copy</button></p>
     <p><div id="even">2</div> <button type="button" onclick="copyToClipboard($('#even').text())">Copy</button></p>
   </form>
