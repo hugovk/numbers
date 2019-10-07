@@ -18,11 +18,17 @@ function getOddAndEven() {
     let odds = [];
     let evens = [];
 
-    for (let i = 1; i < total+1; i++){
-      if ((i % 2) === 0)
+    for (let i = 1; i < total+1; i++) {
+      if ((i % 2) === 0) {
         evens.push(i);
-      else
-        odds.push(i)
+      } else {
+        odds.push(i);
+      }
+    }
+
+    if (total % 2 === 1) {
+      const last = odds.pop();
+      odds.push('<span class="last">' + last + '</span>');
     }
 
     $("#odd").html(odds.join(", "));

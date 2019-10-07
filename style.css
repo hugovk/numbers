@@ -20,3 +20,7 @@ input {
   font-size: xx-large;
   width: 4ch;
 }
+
+.last {
+  color: red;
+}
