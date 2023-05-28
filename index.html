@@ -6,10 +6,10 @@
   <meta name="description" content="The odd and even numbers for a page range, to help with double-sided printing">
   <meta name="theme-color" content="black">
   <link rel="stylesheet" href="style.css">
-  <script src='js/jquery-3.4.1.min.js'></script>
   <script>
-    $(document).ready(function() {
-      $('#frm1').keyup(function() {
+    document.addEventListener('DOMContentLoaded', function() {
+      let frm1 = document.getElementById('frm1');
+      frm1.addEventListener('keyup', function() {
         getOddAndEven();
       });
     });

@@ -1,4 +1,4 @@
-const copyToClipboard = str => {
+function copyToClipboard(str) {
   const el = document.createElement('textarea');
   el.value = str;
   el.setAttribute('readonly', '');
@@ -8,18 +8,18 @@ const copyToClipboard = str => {
   el.select();
   document.execCommand('copy');
   document.body.removeChild(el);
-};
+}
 
 function getOddAndEven() {
-  const pages = $("input[name=pages]");
+  const pages = document.querySelectorAll('input[name="pages"]')[0];
 
-  if (pages.val().length) {
-    const total = Number(pages.val());
+  if (pages.value.length) {
+    const total = Number(pages.value);
     let odds = [];
     let evens = [];
 
-    for (let i = 1; i < total+1; i++) {
-      if ((i % 2) === 0) {
+    for (let i = 1; i < total + 1; i++) {
+      if (i % 2 === 0) {
         evens.push(i);
       } else {
         odds.push(i);
@@ -31,7 +31,7 @@ function getOddAndEven() {
       odds.push('<span class="last">' + last + '</span>');
     }
 
-    $("#odd").html(odds.join(", "));
-    $("#even").html(evens.join(", "));
+    document.getElementById('odd').innerHTML = odds.join(', ');
+    document.getElementById('even').innerHTML = evens.join(', ');
   }
 }
